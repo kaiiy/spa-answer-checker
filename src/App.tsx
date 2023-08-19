@@ -30,11 +30,11 @@ const Home: FC = () => {
   );
 }
 
-const About: FC = () => {
+const Clear: FC = () => {
   const navigate = useNavigate()
   return (
     <>
-      <div>About Page</div>
+      <div>Clear Page</div>
       <hr />
       <button onClick={() => navigate('/')} >Go to Home</button >
     </>
@@ -47,7 +47,7 @@ export const App = () => {
     <MemoryRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/clear" element={<Clear />} />
       </Routes>
     </MemoryRouter>
   );
