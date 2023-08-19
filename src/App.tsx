@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate, MemoryRouter } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate()
@@ -11,18 +11,24 @@ function Home() {
 }
 
 function About() {
-  return <div>About Us</div>;
+  const navigate = useNavigate()
+  return (
+    <>
+      <div>About Page</div>
+      <button onClick={() => navigate('/')} >Go to Home</button >
+    </>
+  );
 }
 
 
 export const App = () => {
   return (
-    <Router>
+    <MemoryRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </Router>
+    </MemoryRouter>
   );
 }
 
