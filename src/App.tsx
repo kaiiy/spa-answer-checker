@@ -2,7 +2,8 @@ import { Route, Routes, useNavigate, MemoryRouter } from 'react-router-dom';
 import { useState, FC } from 'react';
 import { AESHelper } from "./crypt"
 
-const ANSWER_CRYPTO = "U2FsdGVkX1+TvJuAYndt802ApIma3Y0mXAr0wK30VJg="
+const ANSWER_CRYPTO = "U2FsdGVkX1/fhh/meBYqlW5/s39uyWeAz9veAMQRXhU="
+const CLEAR_PATH = "/c"
 
 const Home: FC = () => {
   const navigate = useNavigate()
@@ -47,7 +48,7 @@ export const App = () => {
     <MemoryRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/clear" element={<Clear />} />
+        <Route path={CLEAR_PATH} element={<Clear />} />
       </Routes>
     </MemoryRouter>
   );
