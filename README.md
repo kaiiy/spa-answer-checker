@@ -1,4 +1,6 @@
-# SPA Answer Checker
+# SPA Answer Checker Demo
+
+クライアントサイドで解答判定
 
 - Vite
 - React
